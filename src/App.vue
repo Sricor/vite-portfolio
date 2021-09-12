@@ -1,25 +1,31 @@
-<script setup lang="ts">
-import { useHead } from '@vueuse/head'
+<script setup>
+/*import { ref } from 'vue'
 
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
-const title = ref("Sricor's Portfolio")
+defineProps({
+  msg: String
+})
+
+<HelloWorld msg="Hello Vue 3 + Vite" />
+
+*/
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+import { useRouter } from 'vue-router'
+
 const router = useRouter()
 
-// 路由回到顶部
+//路由回到顶部
 router.afterEach((to,from,next) => {
- window.scrollTo(0,0);
-})
-
-useHead({
-  title: title.value,
-  meta: [
-    { name: 'description', content: 'Sricor Portfolio' },
-  ],
+  window.scrollTo(0,0);
 })
 </script>
-
-<template lang="pug">
-router-view
+<template>
+  <Navbar />
+  <router-view />
+  <Footer />
 </template>
+
+<style>
+</style>
