@@ -1,5 +1,4 @@
 name: Deploy
-
 on:
   push:
     branches: [ main ]
@@ -7,7 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -16,6 +14,6 @@ jobs:
         git config --global user.email josricor@outlook.com
         git config --global user.name josricor
         yarn && yarn build
-        cd dist && git add .
+        cd dist && git add . -f
         git commit -m "deploy"
         git push gh-pages -f
