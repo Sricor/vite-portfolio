@@ -4,6 +4,11 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
+// 返回顶部
+const backTop = () => {
+  window.scrollTo(0,0)
+}
+
 // 遍历作品集调用
 // 展示组件的复用
 const getProject = () =>{
@@ -46,47 +51,46 @@ const project = getProject()
   .row
     .col-2
       small
-        a(href="#project")
-          | ↑ back to top
+        a(@click="backTop()")
+          | ↑ Back to top
     .col
     .col-3.is-text-right
-      small Also see:
+      small Also see: 
         a(href="/work/cita")
           | Cita →
 </template>
 
-<style>
-#project iframe,
-#project video {
+<style scoped>
+iframe, video {
   max-width: 100%
 }
 
-#project>figure {
+figure {
   width: 90%;
   margin: 5rem auto
 }
 
-#project header {
+header {
   text-align: center;
   font-size: 2rem;
   margin: 6rem 1rem
 }
 
-#project header h1 {
+header h1 {
   margin-bottom: 1rem
 }
 
 @media screen and (max-width:480px) {
-  #project h1 {
+  h1 {
     margin: 5rem 1rem
   }
 }
 
-#project .details tr {
+.details tr {
   border-bottom: 1px solid var(--lightGrey-color)
 }
 
-#project .details tr td:last-child {
+.details tr td:last-child {
   font-weight: 500
 }
 </style>
