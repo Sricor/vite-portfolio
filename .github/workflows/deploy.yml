@@ -25,5 +25,5 @@ jobs:
       run: |
         yarn && yarn build
         npm i -g gh-pages
-        gh-pages -r git@github.com:Sricor/Portfolio.git
+        gh-pages -d dist -r git@github.com:Sricor/Portfolio.git
         
