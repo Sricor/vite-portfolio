@@ -24,4 +24,4 @@ jobs:
     - name: Deploy
       run: |
         yarn && yarn build
-        node gh-pages.js
+        NODE_DEBUG=yarn gh-pages
