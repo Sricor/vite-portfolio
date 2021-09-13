@@ -5,6 +5,7 @@ import Portfolio from './components/Portfolio.vue'
 import Project from './components/Project.vue'
 import NotFound from './components/NotFound.vue'
 
+// 创建路由
 const routes = [
   {
     path: '/',
@@ -22,7 +23,6 @@ const routes = [
     component: NotFound
   },
 ]
-
 const router = createRouter({
   history: createWebHistory(),
   routes

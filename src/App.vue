@@ -1,35 +1,54 @@
 <script setup>
+// 数据传递
 /*import { ref } from 'vue'
-
 defineProps({
   msg: String
 })
-
 <HelloWorld msg="Hello Vue 3 + Vite" />
-
 */
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+
+import { useRouter } from 'vue-router'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-//路由回到顶部
-router.afterEach((to,from,next) => {
-  window.scrollTo(0,0);
+// 进度条设置
+NProgress.configure({
+  easing: 'ease', // 动画方式
+  speed: 500, // 递增进度条的速度
+  showSpinner: true, // 是否显示加载ico
+  trickleSpeed: 200, // 自动递增间隔
+  minimum: 0.3 // 初始化时的最小百分比
 })
+
+// 路由钩子
+router.beforeEach((to, from, next) => {
+  NProgress.start()  // 每次切换页面时，调用进度条
+  next()  // 页面跳转
+})
+router.afterEach(() => {
+  window.scrollTo(0,0)  // 回到顶部
+  NProgress.done()  // 在即将进入新的页面组件前，关闭掉进度条
+})
+
 </script>
 
 <template lang="pug">
 Navbar
-router-view
+router-view.view
 Footer
 </template>
 
 
 <style>
+#nprogress .bar {
+  background-color: var(--color-primary);
+}
+
 .title[data-v-2b7bd773] {
   margin-top: 15px;
   font-size: 5em
