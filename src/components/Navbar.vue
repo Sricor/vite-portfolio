@@ -7,21 +7,20 @@ const go = (path) => {
 }
 </script>
 
-<template>
-<nav class="main-nav nav">
-  <div class="container">
-    <div class="nav-left">
-      <a class="nuxt-link-active" @click="go('')">
-        <div class="logo">💖</div>
-      </a>
-    </div>
-    <div class="nav-right nav-menu">
-      <a @click="go('')">😘  Home</a>
-        <a @click="go('')">🎨  Artboards</a>
-        <a href="https://blog.sricor.work" target="_blank">📝  Blog</a>
-        <a @click="go('about')">📥  About</a>
-    </div>
-  </div>
-</nav>
+<template lang="pug">
+nav.main-nav.nav
+  .container
+    .nav-left
+      a.nuxt-link-active(@click="go('')")
+        .logo 💖  {{ config.name }}
+    .nav-right.nav-menu
+      a(@click="go('')")
+        | 😘  Home
+      a(@click="go('')")
+        | 🎨  Artboards
+      a(href="https://blog.sricor.work" target="_blank")
+        | 📝  Blog
+      a(@click="go('about')")
+        | 📥  About
 </template>
 

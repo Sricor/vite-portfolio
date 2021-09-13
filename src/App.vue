@@ -21,11 +21,13 @@ router.afterEach((to,from,next) => {
   window.scrollTo(0,0);
 })
 </script>
-<template>
-  <Navbar />
-  <router-view />
-  <Footer />
+
+<template lang="pug">
+Navbar
+router-view
+Footer
 </template>
+
 
 <style>
 .title[data-v-2b7bd773] {

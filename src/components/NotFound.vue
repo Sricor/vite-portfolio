@@ -1,5 +1,5 @@
-<template>
-  <p> 404 Not Found</p>
+<template lang="pug">
+p 404 Not Found
 </template>
 
 <style scoped>
