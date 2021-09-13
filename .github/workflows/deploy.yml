@@ -25,5 +25,5 @@ jobs:
       run: |
         yarn && yarn build
         yarn add gh-pages
-        yarn gh-pages -d dist -r git@github.com:Sricor/Portfolio.git
+        yarn gh-pages -d dist -r git@github.com:Sricor/Portfolio.git -f
         
