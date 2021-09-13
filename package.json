@@ -17,6 +17,7 @@
     "nprogress": "^0.2.0",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
+    "scrollreveal": "^4.0.9",
     "vite": "^2.5.4"
   }
 }

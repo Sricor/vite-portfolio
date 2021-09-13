@@ -10,12 +10,12 @@ defineProps({
 import { useRouter } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import 'chota' //css
+import 'chota' 
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-
-
-
+import scrollReveal from 'scrollreveal'
+const sr = scrollReveal()
+sr.reveal('.sr', { delay: 200})
 const router = useRouter()
 
 // 进度条设置
@@ -41,10 +41,9 @@ router.afterEach(() => {
 
 <template lang="pug">
 Navbar
-router-view
+router-view.view
 Footer
 </template>
-
 
 <style>
 :root {
