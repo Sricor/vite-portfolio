@@ -26,4 +26,4 @@ jobs:
         yarn && yarn build
         git add dist/. -f
         git commit -m "deploy"
-        git push gh-pages -f
+        git push -f origin gh-pages
