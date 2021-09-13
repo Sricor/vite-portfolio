@@ -9,10 +9,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
-    - name: deploy
+    - name: Set ENV
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
-        git config --global user.email josricor@outlook.com
-        git config --global user.name josricor
+          mkdir -p ~/.ssh/
+          echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.email josricor@outlook.com
+          git config --global user.name josricor
+          
+    - name: Deploy
+      run: |
         yarn && yarn build
         git add dist/. -f
         git commit -m "deploy"
