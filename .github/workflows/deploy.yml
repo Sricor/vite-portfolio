@@ -24,4 +24,4 @@ jobs:
     - name: Deploy
       run: |
         yarn && yarn build
-        NODE_DEBUG=yarn deploy
+        yarn deploy
