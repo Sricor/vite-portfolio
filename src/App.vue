@@ -47,7 +47,6 @@ Footer
 
 
 <style>
-
 :root {
   --primary-color: #28a386;
   --font-family: sans-serif, system-ui
@@ -63,6 +62,27 @@ body {
   -webkit-font-feature-settings: "kern"1;
   font-feature-settings: "kern"1
 }
+
+/*   Scrollbar */
+body::-webkit-scrollbar{
+      width:10px;
+      height:10px;
+    }
+body::-webkit-scrollbar-track{
+  background: rgb(239, 239, 239);
+  border-radius:2px;
+}
+body::-webkit-scrollbar-thumb{
+  background: #bfbfbf;
+  border-radius:10px;
+}
+body::-webkit-scrollbar-thumb:hover{
+  background: #333;
+}
+body::-webkit-scrollbar-corner{
+  background: #179a16;
+}
+
 
 #nprogress .bar {
   background-color: var(--color-primary);
