@@ -198,7 +198,8 @@ h6 {
 .hero {
   min-height: 200px;
   height: 50vh;
-  width: 75vw
+  width: 75vw;
+  font: 1.1em sans-serif;
 }
 
 .lead {

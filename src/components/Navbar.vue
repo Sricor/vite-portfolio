@@ -24,9 +24,22 @@ nav.main-nav.nav
         | 📥  About
 </template>
 
-<style>
+<style scoped>
+.logo svg {
+  width: 5rem;
+  fill: var(--primary-color)
+}
+
+.main-nav {
+  margin-top: 6.5rem;
+}
+
 .nav-menu {
-  flex: 1 1 auto
+  flex: 1 1 auto;
+}
+
+a {
+  font-size: 1.2em;
 }
 
 @media screen and (max-width:480px) {
@@ -39,12 +52,4 @@ nav.main-nav.nav
   }
 }
 
-.logo svg {
-  width: 5rem;
-  fill: var(--primary-color)
-}
-
-.main-nav {
-  margin-top: 3rem
-}
 </style>

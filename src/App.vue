@@ -15,6 +15,7 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
 
+
 const router = useRouter()
 
 // 进度条设置
@@ -49,7 +50,7 @@ Footer
 
 :root {
   --primary-color: #28a386;
-  --font-family: "Inter UI", system-ui, sans-serif
+  --font-family: sans-serif, system-ui
 }
 
 body {
