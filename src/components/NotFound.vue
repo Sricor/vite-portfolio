@@ -1,5 +1,5 @@
 <template>
-  <p>Not Found 404</p>
+  <p> 404 Not Found</p>
 </template>
 
 <style scoped>

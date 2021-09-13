@@ -136,6 +136,7 @@ h6 {
 }
 
 a {
+  cursor: pointer;
   color: var(--color-primary);
   text-decoration: none
 }

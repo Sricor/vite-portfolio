@@ -1,5 +1,19 @@
 <script setup>
-//{{ $route.params.id }}
+import config from '../../web.config'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const name = route.params.project
+
+const projectList = config.project
+
+for(let i=0; i<projectList.length; i++) {
+  if(projectList[i].name == name) {
+    const project = projectList[i]
+    this.project = project
+  }
+}
+console.log(project)
 </script>
 <template>
   <div class="container" id="project">
@@ -30,25 +44,12 @@
       </table>
     </div>
   </div> <br>
+  
   <figure class="figure_1ZhV3">
     <img src="https://data.sricor.work/images/ventHub/ventHub%20(1).png">
-    <p>Mark43 CAD setup</p>
-    <!---->
   </figure>
-  <p>I had been given 2 tasks for the summer, first of which was working on the <a
-      href="https://drive.google.com/open?id=1R7C92yimJxUmWWMgGORdC5PYRnePDaIw" target="_blank">Command Line
-      feature</a> of the product which had been spec’d but was yet to be designed. The other task was making a
-    style guide for the entire CAD design components as a first step towards building a robust design system.
-  </p>
-  <p>On the weekend before my internship ended, while working on the style guide I thought of making a small
-    goodbye gift for the team and made them a CAD-style Atom editor theme called <a
-      href="https://atom.io/themes/atom-mark43-ui">Atom Mark43 UI</a>.
-    If you use Atom feel free to try the theme.</p>
-  <figure class="figure_1ZhV3"><img
-      src="https://data.sricor.work/images/ventHub/ventHub%20(2).png"
-      alt="Atom theme for Mark43" title="Atom theme for Mark43">
-    <p>Atom theme for Mark43</p>
-    <!---->
+  <figure class="figure_1ZhV3">
+    <img src="https://data.sricor.work/images/ventHub/ventHub%20(2).png">
   </figure> <br>
   <hr> <br>
   <div class="row">
