@@ -45,3 +45,21 @@ footer.footer.container
       | .
     p {{ config.author }} © 2010 - {{ new Date().getFullYear() }} 粤ICP备2021126496号
 </template>
+
+
+<style scoped>
+footer.footer {
+  margin: 5rem auto
+}
+
+@media screen and (min-width:48rem) {
+  footer.footer .nav a:first-child {
+    padding-left: 0
+  }
+}
+
+footer.footer .colophon>* {
+  font-size: 1.3rem;
+  margin-bottom: 1rem
+}
+</style>

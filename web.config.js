@@ -11,13 +11,13 @@ export default {
       image: "ventHub/ventHub%20(1).png"
     },
     {
-      project: "projectName", 
+      project: "project", 
       title: "projectTitle", 
       info: "", 
       description: "projectDescription", 
       image: "ventHub/ventHub%20(3).png"},
     {
-      project: "projectName", 
+      project: "project", 
       title: "projectTitle", 
       info: "", 
       description: "projectDescription", 
@@ -26,13 +26,13 @@ export default {
   ],
   profolioRight:[
     {
-      project: "projectName", 
+      project: "project", 
       title: "projectTitle", 
       info: "", 
       description: "projectDescription", 
       image: "Hope.jpg"},
     {
-      project: "projectName", 
+      project: "project", 
       title: "projectTitle", 
       info: "", 
       description: "projectDescription", 

@@ -54,3 +54,39 @@ const project = getProject()
         a(href="/work/cita")
           | Cita →
 </template>
+
+<style>
+#project iframe,
+#project video {
+  max-width: 100%
+}
+
+#project>figure {
+  width: 90%;
+  margin: 5rem auto
+}
+
+#project header {
+  text-align: center;
+  font-size: 2rem;
+  margin: 6rem 1rem
+}
+
+#project header h1 {
+  margin-bottom: 1rem
+}
+
+@media screen and (max-width:480px) {
+  #project h1 {
+    margin: 5rem 1rem
+  }
+}
+
+#project .details tr {
+  border-bottom: 1px solid var(--lightGrey-color)
+}
+
+#project .details tr td:last-child {
+  font-weight: 500
+}
+</style>

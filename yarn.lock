@@ -230,6 +230,11 @@ character-parser@^2.1.1:
   dependencies:
     is-regex "^1.0.3"
 
+chota@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/chota/-/chota-0.8.0.tgz#46a2d87c9eea7e811017e5b410745b839a9f343a"
+  integrity sha512-6Y6MrULPNVup+9i+bFF5mXvifw4/N0AqcTO6VkhRcmRqY0XD2/EKq2kD8y7dX/PJnDq9ruHl2NURlPtGkMSNsg==
+
 clean-css@^4.1.11:
   version "4.2.3"
   resolved "https://registry.npmjs.org/clean-css/-/clean-css-4.2.3.tgz"

@@ -24,3 +24,27 @@ nav.main-nav.nav
         | 📥  About
 </template>
 
+<style>
+.nav-menu {
+  flex: 1 1 auto
+}
+
+@media screen and (max-width:480px) {
+  .nav-menu {
+    margin-top: 2rem
+  }
+
+  .nav a {
+    padding: 1rem
+  }
+}
+
+.logo svg {
+  width: 5rem;
+  fill: var(--primary-color)
+}
+
+.main-nav {
+  margin-top: 3rem
+}
+</style>
