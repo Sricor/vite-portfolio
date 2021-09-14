@@ -44,7 +44,7 @@ const bg = () => {
     document.body.style.backgroundImage = null 
   }
   else{
-    document.body.style.backgroundImage = "url('../public/background.png')"
+    document.body.style.backgroundImage = "url('./background.png')"
   }
 }
 
