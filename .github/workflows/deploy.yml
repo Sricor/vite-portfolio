@@ -29,5 +29,5 @@ jobs:
       run: |
         yarn && yarn build
         yarn add gh-pages
-        yarn gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -f
+        yarn gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -b main -f
         
