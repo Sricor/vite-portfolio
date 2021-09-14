@@ -10,8 +10,6 @@ defineProps({
 import { useRouter } from 'vue-router'
 import { useRoute } from 'vue-router'
 
-
-import scrollReveal from 'scrollreveal'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import 'chota' 
@@ -19,10 +17,6 @@ import 'chota'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
-
-// 平滑
-const sr = scrollReveal()
-sr.reveal('.sr', { delay: 350})
 
 // 进度条设置
 NProgress.configure({
