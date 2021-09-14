@@ -1,7 +1,8 @@
 export default {
   name: "Sricor's Portfolio",
   author: 'Sricor',
-  imageUrl: 'https://data.sricor.work/images/',
+  imageUrl: 'https://data-1304997866.cos.ap-guangzhou.myqcloud.com/images/',
+  imageWebp: '?imageMogr2/format/webp/interlace/1/quality/100',
   profolioLeft: [
     {
       project: "project", 

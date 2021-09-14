@@ -50,7 +50,7 @@ div
         .card.left(v-for="project in config.profolioLeft")
           a(@click="go(project.project)")
             figure.figure
-              img(:src="config.imageUrl+project.image")
+              img(:src="config.imageUrl + project.image + config.imageWebp")
             footer
               h4 {{ project.title }}
               small {{ project.info }}
@@ -59,7 +59,7 @@ div
         .card.right(v-for="project in config.profolioRight")
           a(@click="go(project.project)")
             figure.figure
-              img(:src="config.imageUrl+project.image")
+              img(:src="config.imageUrl + project.image + config.imageWebp")
             footer
               h4 {{ project.title }}
               small {{ project.info }}

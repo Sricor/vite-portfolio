@@ -43,7 +43,7 @@ footer.footer.container
       a(href="https://rsms.me/inter/" target="_blank")
         |  Inter UI 
       | .
-    p {{ config.author }} © 2010 - {{ new Date().getFullYear() }} 粤ICP备2021126496号
+    p {{ config.author }} © 2020 - {{ new Date().getFullYear() }} 粤ICP备2021126496号
 </template>
 
 

@@ -44,7 +44,7 @@ const project = getProject()
             td Categories
             td {{ project.details.categories }}
   br
-  img(v-for="i in project.image" :src="config.imageUrl+i")
+  img(v-for="i in project.image" :src="config.imageUrl + i + config.imageWebp")
   br
   hr
   br
