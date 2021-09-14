@@ -18,7 +18,7 @@ nav.main-nav.nav
         | 😘  Home
       a(:href="config.panUrl" target="_blank")
         | 🎨  Onedrive
-      a(href="https://blog.sricor.work" target="_blank")
+      a(:href="config.blogUrl" target="_blank")
         | 📝  Blog
       a(@click="go('about')")
         | 📥  About

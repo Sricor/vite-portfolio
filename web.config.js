@@ -2,6 +2,7 @@ export default {
   name: "Sricor's Portfolio",
   author: 'Sricor',
   panUrl: '	https://service-4yjx0b7s-1304997866.gz.apigw.tencentcs.com/release/OneDrive',
+  blogUrl: 'https://blog.sricor.work',
   imageUrl: 'https://data-1304997866.cos.ap-guangzhou.myqcloud.com/images/',
   imageWebp: '?imageMogr2/format/webp/interlace/1/quality/100',
   profolioLeft: [

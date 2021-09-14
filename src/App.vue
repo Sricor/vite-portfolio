@@ -8,6 +8,9 @@ defineProps({
 */
 
 import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
+
+
 import scrollReveal from 'scrollreveal'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -30,16 +33,31 @@ NProgress.configure({
   minimum: 0.3 // 初始化时的最小百分比
 })
 
+// 路由
 // 导航守卫
+const route = useRoute()
 const router = useRouter()
+
+// Background
+const bg = () => {
+  if(route.name == 'Article'){
+    document.body.style.backgroundImage = null 
+  }
+  else{
+    document.body.style.backgroundImage = "url('../public/background.png')"
+  }
+}
+
 router.beforeEach((to, from, next) => {
   NProgress.start()  // 每次切换页面时，调用进度条
   next()  // 页面跳转
 })
 router.afterEach(() => {
   window.scrollTo(0,0)  // 回到顶部
+  bg()
   NProgress.done()  // 在即将进入新的页面组件前，关闭掉进度条
 })
+
 
 </script>
 
