@@ -1,24 +1,33 @@
-name: Deploy
+name: Sync Deploy
+
 on:
   push:
-    branches: [ main ]
+    branches: 
+      [ main ]
   workflow_dispatch:
   schedule:
     - cron: '0 18 * * *'
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      
+
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+          
+      - name: Build
+        run: |
+          npm i -g serverless
+          yarn && yarn deploy
       - name: Set ENV
         env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
           TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
         run: |
+            DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
             mkdir -p ~/.ssh/
             echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
             chmod 700 ~/.ssh
@@ -29,12 +38,13 @@ jobs:
             git config --global user.email josricor@outlook.com
             git config --global user.name josricor
             yarn && yarn build
-            
+
       - name: Deploy GitHub Pages
         run: |
           npm i -g gh-pages
           yarn gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -b main -f
-      
+
       - name: Deploy Tencent Serverless
+        run: |
           npm i -g serverless
           sls deploy -f
