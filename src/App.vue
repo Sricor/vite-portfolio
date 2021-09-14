@@ -8,15 +8,18 @@ defineProps({
 */
 
 import { useRouter } from 'vue-router'
+import scrollReveal from 'scrollreveal'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import 'chota' 
+
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import scrollReveal from 'scrollreveal'
+
+
+// 平滑
 const sr = scrollReveal()
-sr.reveal('.sr', { delay: 200})
-const router = useRouter()
+sr.reveal('.sr', { delay: 350})
 
 // 进度条设置
 NProgress.configure({
@@ -27,7 +30,8 @@ NProgress.configure({
   minimum: 0.3 // 初始化时的最小百分比
 })
 
-// 路由钩子
+// 导航守卫
+const router = useRouter()
 router.beforeEach((to, from, next) => {
   NProgress.start()  // 每次切换页面时，调用进度条
   next()  // 页面跳转
@@ -62,6 +66,10 @@ body {
   font-feature-settings: "kern"1
 }
 
+#nprogress .bar {
+  background-color: var(--color-primary);
+}
+
 /*   Scrollbar */
 body::-webkit-scrollbar{
       width:10px;
@@ -82,10 +90,6 @@ body::-webkit-scrollbar-corner{
   background: #179a16;
 }
 
-
-#nprogress .bar {
-  background-color: var(--color-primary);
-}
 
 .container {
   width: 90%
