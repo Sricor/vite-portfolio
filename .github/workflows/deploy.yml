@@ -1,5 +1,4 @@
 name: Deploy
-
 on:
   push:
     branches: [ main ]
@@ -11,31 +10,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-    
-    - name: Set ENV
-      env:
-        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-        TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
-        TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
-      run: |
-          mkdir -p ~/.ssh/
-          echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          echo -e "TENCENT_SECRET_ID=$TENCENT_SECRET_ID\nTENCENT_SECRET_KEY=$TENCENT_SECRET_KEY\nSERVERLESS_PLATFORM_VENDOR=tencent\nGLOBAL_ACCELERATOR_NA=true" > .env
-          cat.env
-          git config --global user.email josricor@outlook.com
-          git config --global user.name josricor
-          yarn && yarn build
-          
-    - name: Deploy GitHub Pages
-      run: |
-        npm i -g gh-pages
-        yarn gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -b main -f
-    
-    - name: Deploy Tencent Serverless
-        npm i -g serverless
-        sls deploy -f
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      
+      - name: Set ENV
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+        run: |
+            mkdir -p ~/.ssh/
+            echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+            chmod 700 ~/.ssh
+            chmod 600 ~/.ssh/id_rsa
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            echo -e "TENCENT_SECRET_ID=$TENCENT_SECRET_ID\nTENCENT_SECRET_KEY=$TENCENT_SECRET_KEY\nSERVERLESS_PLATFORM_VENDOR=tencent\nGLOBAL_ACCELERATOR_NA=true" > .env
+            cat.env
+            git config --global user.email josricor@outlook.com
+            git config --global user.name josricor
+            yarn && yarn build
+            
+      - name: Deploy GitHub Pages
+        run: |
+          npm i -g gh-pages
+          yarn gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -b main -f
+      
+      - name: Deploy Tencent Serverless
+          npm i -g serverless
+          sls deploy -f
