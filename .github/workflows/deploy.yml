@@ -38,7 +38,7 @@ jobs:
       - name: Deploy GitHub Pages
         run: |
           npm i -g gh-pages
-          yarn gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -b main -f
+          gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -b main -f
 
       - name: Deploy Tencent Serverless
         run: |
