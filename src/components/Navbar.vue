@@ -16,8 +16,8 @@ nav.main-nav.nav
     .nav-right.nav-menu
       a(@click="go('')")
         | 😘  Home
-      a(@click="go('')")
-        | 🎨  Artboards
+      a(:href="config.panUrl" target="_blank")
+        | 🎨  Onedrive
       a(href="https://blog.sricor.work" target="_blank")
         | 📝  Blog
       a(@click="go('about')")
