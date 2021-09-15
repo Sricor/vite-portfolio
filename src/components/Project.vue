@@ -21,6 +21,11 @@ const getProject = () =>{
   }
 }
 
+const darkMode = () => {
+  document.body.style.backgroundColor="#121212"
+  document.body.style.color= "white"
+}
+
 const project = getProject()
 
 </script>
