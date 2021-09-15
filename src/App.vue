@@ -39,6 +39,8 @@ const bg = () => {
   }
   else{
     document.body.style.backgroundImage = "url('./background.png')"
+    document.body.style.backgroundAttachment = "fixed"
+    document.body.style.backgroundSize = "cover"
   }
 }
 
