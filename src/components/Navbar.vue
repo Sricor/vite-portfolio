@@ -40,6 +40,7 @@ nav.main-nav.nav
 
 a {
   font-size: 1.2em;
+  color: currentColor;
 }
 
 @media screen and (max-width:480px) {

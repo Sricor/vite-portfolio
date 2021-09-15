@@ -20,14 +20,17 @@ const getProject = () =>{
     }
   }
 }
-
-const darkMode = () => {
-  document.body.style.backgroundColor="#121212"
-  document.body.style.color= "white"
-}
-
 const project = getProject()
 
+// 暗黑模式
+const darkMode = () => {
+  document.body.style = null
+  document.body.style.backgroundColor="#121212"
+  document.body.style.color= "white"
+  document.body.style.transition = "all .8s ease-out"
+}
+
+//darkMode()
 </script>
 <template lang="pug">
 #project.container

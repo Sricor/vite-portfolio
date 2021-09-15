@@ -6,6 +6,7 @@ const router = useRouter()
 const go = (path) => {
   router.push(`/portfolio/${path}`)
 }
+
 </script>
 
 <template lang="pug">
@@ -16,29 +17,28 @@ div
       .
         I'm Sricor,
         a
-      a(href="" target="_blank")
-        |  designer  
-      .
-        passionate about crafting great user experiences with a strong understanding of development.
+      a(href target="_blank")
+        | designer
+      | passionate about crafting great user experiences with a strong understanding of development.
       small I have a penchant for
-        a(href="" target="_blank")
-          |  design tools 
-        | and 
-        a(href="" target="_blank")
-          |  design systems 
+        a(href target="_blank")
+          | design tools
+        | and
+        a(href target="_blank")
+          | design systems
         | .
       small Also, I've made
-        a(href="" target="_blank")
-          |  free website themes 
+        a(href target="_blank")
+          | free website themes
         | ,
-        a(href="" target="_blank")
-          |  a CSS framework 
+        a(href target="_blank")
+          | a CSS framework
         | ,
-        a(href="" target="_blank")
-          |  a icon CDN 
+        a(href target="_blank")
+          | a icon CDN
         | and
-        a(href="" target="_blank")
-          |  a Chrome extension 
+        a(href target="_blank")
+          | a Chrome extension
         | .
   hr
   br
@@ -68,6 +68,7 @@ div
     a.outline.button.secondary(target="_blank" href="https://be.net/jenil")
       | See more work on Behance
   br
+
 </template>
 
 

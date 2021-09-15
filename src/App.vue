@@ -34,8 +34,8 @@ const router = useRouter()
 
 // Background
 const bg = () => {
-  if(route.name == 'Article'){
-    document.body.style.backgroundImage = null 
+  if(route.name != 'Portfolio'){
+    document.body.style.backgroundImage = null // 非主页清背景
   }
   else{
     document.body.style.backgroundImage = "url('./background.png')"
@@ -53,7 +53,6 @@ router.afterEach(() => {
   bg()
   NProgress.done()  // 在即将进入新的页面组件前，关闭掉进度条
 })
-
 
 </script>
 
