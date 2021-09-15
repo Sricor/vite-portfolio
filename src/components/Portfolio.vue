@@ -113,6 +113,11 @@ h6 {
   margin-bottom: calc(var(--grid-gutter)*2)
 }
 
+.card:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1.02, 1.02, 1.02);
+  box-shadow: rgba(0, 0, 0, .5) 0px 10px 50px;
+}
+
 .card a {
   display: block
 }
