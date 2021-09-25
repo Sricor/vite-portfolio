@@ -29,7 +29,6 @@ jobs:
             chmod 700 ~/.ssh
             chmod 600 ~/.ssh/id_rsa
             ssh-keyscan github.com >> ~/.ssh/known_hosts
-            echo -e "TENCENT_SECRET_ID=$TENCENT_SECRET_ID\nTENCENT_SECRET_KEY=$TENCENT_SECRET_KEY\nSERVERLESS_PLATFORM_VENDOR=tencent\nGLOBAL_ACCELERATOR_NA=true" > .env
             git config --global user.email josricor@outlook.com
             git config --global user.name josricor
             yarn && yarn build
