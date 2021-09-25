@@ -30,11 +30,11 @@ jobs:
             chmod 600 ~/.ssh/id_rsa
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             echo -e "TENCENT_SECRET_ID=$TENCENT_SECRET_ID\nTENCENT_SECRET_KEY=$TENCENT_SECRET_KEY\nSERVERLESS_PLATFORM_VENDOR=tencent\nGLOBAL_ACCELERATOR_NA=true" > .env
-            cd dist
-            echo -e "sricor.work" > CNAME
             git config --global user.email josricor@outlook.com
             git config --global user.name josricor
             yarn && yarn build
+            cd dist
+            echo -e "sricor.work" > CNAME
 
       - name: Deploy GitHub Pages
         run: |
