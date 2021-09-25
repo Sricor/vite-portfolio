@@ -39,8 +39,3 @@ jobs:
         run: |
           npm i -g gh-pages
           gh-pages -d dist -r git@github.com:Sricor/Sricor.github.io.git -b main -f
-
-      - name: Deploy Tencent Serverless
-        run: |
-          npm i -g serverless
-          sls deploy -f
