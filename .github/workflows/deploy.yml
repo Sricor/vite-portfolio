@@ -30,6 +30,7 @@ jobs:
             chmod 600 ~/.ssh/id_rsa
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             echo -e "TENCENT_SECRET_ID=$TENCENT_SECRET_ID\nTENCENT_SECRET_KEY=$TENCENT_SECRET_KEY\nSERVERLESS_PLATFORM_VENDOR=tencent\nGLOBAL_ACCELERATOR_NA=true" > .env
+            echo -e "sricor.work" > CNAME
             cat .env
             git config --global user.email josricor@outlook.com
             git config --global user.name josricor
