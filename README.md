@@ -14,19 +14,15 @@ My personal portfolio web app with <b>Vite</b<sup></sup><br>
 
 ## Build with
 
-- ✔️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [yarn](https://yarnpkg.com/)
-
-
-- ☁️ Deploy on Serverless
-
+- ✔️ [Vue 3](https://github.com/vuejs/vue-next)，[Vite 2](https://github.com/vitejs/vite)   
 <br>
-
 
 
 ## Plugins
 
 - [Vue Router](https://github.com/vuejs/vue-router)
 - [VueUse](https://github.com/antfu/vueuse)
+- [Pug]()
 
 
 ## Coding Style

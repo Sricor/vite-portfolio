@@ -38,9 +38,8 @@ const bg = () => {
     document.body.style.backgroundImage = null // 非主页清背景
   }
   else{
-    document.body.style.backgroundImage = "url('./background.png')"
+    document.body.style.backgroundImage = "url('./bg.png')"
     document.body.style.backgroundAttachment = "fixed"
-    document.body.style.backgroundSize = "cover"
   }
 }
 

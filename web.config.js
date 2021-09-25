@@ -1,10 +1,10 @@
 export default {
   name: "Sricor's Portfolio",
   author: 'Sricor',
-  panUrl: '	https://service-4yjx0b7s-1304997866.gz.apigw.tencentcs.com/release/OneDrive',
+  panUrl: '	/',
   blogUrl: 'https://blog.sricor.work',
-  imageUrl: 'https://data-1304997866.cos.ap-guangzhou.myqcloud.com/images/',
-  imageWebp: '?imageMogr2/format/webp/interlace/1/quality/100',
+  imageUrl: 'https://data-1304997866.cos.ap-guangzhou.myqcloud.com/images/',  //腾讯云cos图床
+  imageWebp: '?imageMogr2/format/webp/interlace/1/quality/100',  //webp图后缀
   profolioLeft: [
     {
       project: "project", 

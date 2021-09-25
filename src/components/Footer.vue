@@ -32,17 +32,10 @@ footer.footer.container
         |  Vue.js 
       | ,
       a(href="https://nuxtjs.org/" target="_blank")
-        |  Nuxt.js 
+        |  Vite.js 
       | ,
       a(href="https://simpleicons.org/" target="_blank")
         |  Simple Icons 
-      | and
-      a(href="https://code.visualstudio.com/" target="_blank")
-        |  Visual Studio Code 
-      | . Typeface is
-      a(href="https://rsms.me/inter/" target="_blank")
-        |  Inter UI 
-      | .
     p {{ config.author }} © 2020 - {{ new Date().getFullYear() }} 粤ICP备2021126496号
 </template>
 
