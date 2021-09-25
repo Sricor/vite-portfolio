@@ -1,12 +1,7 @@
 name: Sync Deploy
 
 on:
-  push:
-    branches: 
-      [ main ]
   workflow_dispatch:
-  schedule:
-    - cron: '0 18 * * *'
 
 jobs:
   deploy:
@@ -20,8 +15,6 @@ jobs:
 
       - name: Set ENV
         env:
-          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
-          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
             mkdir -p ~/.ssh/
