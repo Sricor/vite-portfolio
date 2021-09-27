@@ -27,8 +27,6 @@ jobs:
             git config --global user.email josricor@outlook.com
             git config --global user.name josricor
             yarn && yarn build
-            cd dist
-            echo -e "sricor.work" > CNAME
 
       - name: Deploy GitHub Pages
         run: |
