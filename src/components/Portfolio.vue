@@ -16,20 +16,20 @@ div
       br
       .
         I'm Sricor,
-        a 
+        a
       a(href target="_blank")
-        | designer 
+        | designer
       | passionate about crafting great user experiences with a strong understanding of development.
       small I have a penchant for
         a(href target="_blank")
-          | design tools 
+          | design tools
         | and
         a(href target="_blank")
-          | design systems 
+          | design systems
         | .
-      small Also, I've made 
+      small Also, I've made
         a(href target="_blank")
-          | free website themes 
+          | free website themes
         | ,
         a(href target="_blank")
           | a CSS framework
@@ -68,7 +68,6 @@ div
     a.outline.button.secondary(target="_blank" href="https://be.net/jenil")
       | See more work on Behance
   br
-
 </template>
 
 
