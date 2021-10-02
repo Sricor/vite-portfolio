@@ -17,6 +17,7 @@ jobs:
           TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
           TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
         run: |
-          echo -e "TENCENT_SECRET_ID=$TENCENT_SECRET_ID\nTENCENT_SECRET_KEY=$TENCENT_SECRET_KEY\nSERVERLESS_PLATFORM_VENDOR=tencent" > .env
           yarn && yarn build
-          serverless deploy
+          npm install -g serverless
+          echo -e "TENCENT_SECRET_ID=$TENCENT_SECRET_ID\nTENCENT_SECRET_KEY=$TENCENT_SECRET_KEY\nSERVERLESS_PLATFORM_VENDOR=tencent" > .env
+          serverless deploy --debug
