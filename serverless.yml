@@ -1,0 +1,10 @@
+component: website
+name: portfolio
+inputs:
+  src:
+    src: ./dist
+    index: index.html
+    error: index.html
+  replace: true
+  bucket: portfolio
+  disableErrorStatus: true
