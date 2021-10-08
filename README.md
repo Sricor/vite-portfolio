@@ -46,7 +46,8 @@ To build the App
 ```bash
 git clone https://github.com/Sricor/Sricor.work.git
 cd Sricor.work
-yarn && yarn build
+pnpm i
+pnpm build
 ```
 
 And you will see the generated file in `dist` that ready to be served.
