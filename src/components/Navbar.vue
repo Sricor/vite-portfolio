@@ -1,27 +1,27 @@
+<!--
+ * @Author: joSricor
+ * @Date: 2021-10-07 21:21:49
+-->
+
 <script setup>
-import config from '../../web.config'
-import { useRouter } from 'vue-router'
-const router = useRouter()
-const go = (path) => {
-  router.push(`/${path}`)
-}
 </script>
 
-<template lang="pug">
-nav.main-nav.nav
-  .container
-    .nav-left
-      a.nuxt-link-active(@click="go('')")
-        .logo 💖  {{ config.name }}
-    .nav-right.nav-menu
-      a(@click="go('')")
-        | 😘  Home
-      a(:href="config.panUrl" target="_blank")
-        | 🎨  Onedrive
-      a(:href="config.blogUrl" target="_blank")
-        | 📝  Blog
-      a(@click="go('about')")
-        | 📥  About
+<template>
+<nav class="main-nav nav">
+  <div class="container">
+    <div class="nav-left">
+      <a href="/">
+        <div class="logo">💖 Sricor</div>
+      </a>
+    </div>
+    <div class="nav-right nav-menu">
+      <a href="/">😘 Home</a>
+      <a href="/">🎨 Onedrive</a>
+      <a href="/">📝 Blog</a>
+      <a href="/">📥  About</a>
+    </div>
+  </div>
+</nav>
 </template>
 
 <style scoped>
@@ -47,7 +47,6 @@ a {
   .nav-menu {
     margin-top: 2rem
   }
-
   .nav a {
     padding: 1rem
   }

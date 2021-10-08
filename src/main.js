@@ -1,33 +1,20 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-import Portfolio from './components/Portfolio.vue'
-import Project from './components/Project.vue'
-import NotFound from './components/NotFound.vue'
+import { createApp } from 'vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
-// 创建路由
-const routes = [
-  {
-    path: '/',
-    name:'Portfolio',
-    component: Portfolio
-  },
-  { 
-    path: '/portfolio/:project', 
-    name: 'Article',
-    component: Project
-  },
-  {
-    path: '/:pathMatch(.*)*', 
-    name: 'NotFound', 
-    component: NotFound
-  },
-]
+// pages
+import Home from './pages/Home.vue'
+import VentHub from './pages/VentHub.vue'
+
+// https://next.router.vuejs.org/
 const router = createRouter({
-  history: createWebHistory(),
-  routes
+  history: createWebHashHistory(),
+  routes: [
+    {path: '/', name:'Portfolio', component: Home},
+    {path: '/:pathMatch(.*)*', name: 'Portfolio', component: Home},
+    {path: '/portfolio/ventHub', name:'VentHub', component: VentHub},
+  ],
 })
-
 
 const app = createApp(App)
 app.use(router)

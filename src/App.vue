@@ -1,64 +1,44 @@
+<!--
+ * @Author: joSricor
+ * @Date: 2021-10-07 21:21:49
+-->
+
 <script setup>
-// 数据传递
-/*import { ref } from 'vue'
-defineProps({
-  msg: String
-})
-<HelloWorld msg="Hello Vue 3 + Vite" />
-*/
-
+// Setup Lifecycle Hooks
+// https://v3.vuejs.org/guide/composition-api-lifecycle-hooks.html
+// import { onMounted, onBeforeMount } from 'vue'
+// onMounted(() => { console.log('mounted!') })
+import config from '/web.config.js'
 import { useRouter } from 'vue-router'
-import { useRoute } from 'vue-router'
 
-import NProgress from 'nprogress'
+// https://github.com/jenil/chota
+import 'chota'
+
+// https://github.com/rstacruz/nprogress
 import 'nprogress/nprogress.css'
-import 'chota' 
+import NProgress from 'nprogress'
 
+// components
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
-
-// 进度条设置
-NProgress.configure({
-  easing: 'ease', // 动画方式
-  speed: 500, // 递增进度条的速度
-  showSpinner: true, // 是否显示加载ico
-  trickleSpeed: 200, // 自动递增间隔
-  minimum: 0.3 // 初始化时的最小百分比
-})
-
-// 路由
-// 导航守卫
-const route = useRoute()
 const router = useRouter()
-
-// Background
-const bg = () => {
-  if(route.name != 'Portfolio'){
-    document.body.style.backgroundImage = null // 非主页清背景
-  }
-  else{
-    document.body.style.backgroundImage = "url('./bg.png')"
-    document.body.style.backgroundAttachment = "fixed"
-  }
-}
-
 router.beforeEach((to, from, next) => {
-  NProgress.start()  // 每次切换页面时，调用进度条
-  next()  // 页面跳转
+  NProgress.start()  // NProgress load start
+  document.title = config.author + ' - ' +to.name  // change title
+  next()  // router next
 })
 router.afterEach(() => {
-  window.scrollTo(0,0)  // 回到顶部
-  bg()
-  NProgress.done()  // 在即将进入新的页面组件前，关闭掉进度条
+  document.body.style.backgroundImage = null  // clean bg
+  window.scrollTo(0,0)  // backTop
+  NProgress.done()  // NProgress load end
 })
-
 </script>
 
-<template lang="pug">
-Navbar
-router-view.view
-Footer
+<template>
+  <Navbar />
+  <router-view />
+  <Footer />
 </template>
 
 <style>
@@ -70,6 +50,7 @@ Footer
 body {
   color: #333;
   background-color: #fff;
+  background-attachment: fixed;
   letter-spacing: -.1px;
   font-weight: 400;
   font-kerning: normal;
@@ -78,48 +59,34 @@ body {
   font-feature-settings: "kern"1
 }
 
+body::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(239, 239, 239);
+  border-radius:2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius:10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+body::-webkit-scrollbar-corner {
+  background: #179a16;
+}
+
 #nprogress .bar {
   background-color: var(--color-primary);
 }
 
-/*   Scrollbar */
-body::-webkit-scrollbar{
-      width:10px;
-      height:10px;
-    }
-body::-webkit-scrollbar-track{
-  background: rgb(239, 239, 239);
-  border-radius:2px;
-}
-body::-webkit-scrollbar-thumb{
-  background: #bfbfbf;
-  border-radius:10px;
-}
-body::-webkit-scrollbar-thumb:hover{
-  background: #333;
-}
-body::-webkit-scrollbar-corner{
-  background: #179a16;
-}
-
-
 .container {
   width: 90%
 }
-
-a {
-  transition: color .2s ease;
-  cursor: pointer;
-}
-
-a.no-hover-effect:hover {
-  opacity: 1
-}
-
-hr {
-  width: 100px;
-  margin: 10px auto;
-  display: block
-}
-
 </style>
