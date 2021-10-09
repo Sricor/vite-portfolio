@@ -15,6 +15,7 @@ My personal portfolio web app with <b>Vite</b<sup></sup><br>
 ## Build with
 
 - ✔️ [Vue 3](https://github.com/vuejs/vue-next)，[Vite 2](https://github.com/vitejs/vite)   
+- ✔️ [Vercel](https://vercel.com/dashboard), [Serverless](https://cloud.tencent.com/)
 <br>
 
 
