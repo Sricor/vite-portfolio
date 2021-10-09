@@ -4,12 +4,20 @@
 -->
 
 <script setup>
+import { onMounted } from 'vue'
 import ShowImage from '../components/ShowImage.vue'
 
 const backTop = () => {
   window.scrollTo(0,0)
 }
 
+// darkmode
+/*
+onMounted(() => {
+  document.body.style.backgroundColor= "#121212"
+  document.body.style.color= "#fff"
+ })
+*/
 const title = 'ventHub'
 const images = [
   'ventHub/ventHub%20(1).png',

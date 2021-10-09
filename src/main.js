@@ -4,6 +4,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 // pages
 import Home from './pages/Home.vue'
+import NotFound from './pages/NotFound.vue'
 import VentHub from './pages/VentHub.vue'
 
 // https://next.router.vuejs.org/
@@ -11,7 +12,7 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {path: '/', name:'Portfolio', component: Home},
-    {path: '/:pathMatch(.*)*', name: 'Portfolio', component: Home},
+    {path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound},
     {path: '/portfolio/ventHub', name:'VentHub', component: VentHub},
   ],
 })
