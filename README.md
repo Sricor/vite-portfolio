@@ -22,8 +22,6 @@ My personal portfolio web app with <b>Vite</b<sup></sup><br>
 ## Plugins
 
 - [Vue Router](https://github.com/vuejs/vue-router)
-- [VueUse](https://github.com/antfu/vueuse)
-- [Pug]()
 
 
 ## Coding Style
