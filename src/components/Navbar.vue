@@ -18,7 +18,7 @@
       <a href="/">😘 Home</a>
       <a href="/">🎨 Onedrive</a>
       <a href="/">📝 Blog</a>
-      <a href="/">📥  About</a>
+      <a href="/">📥 About</a>
     </div>
   </div>
 </nav>

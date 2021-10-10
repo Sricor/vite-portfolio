@@ -4,7 +4,7 @@
 -->
 
 <script setup>
-import { onMounted } from 'vue'
+//import { onMounted } from 'vue'
 import ShowImage from '../components/ShowImage.vue'
 
 const backTop = () => {
