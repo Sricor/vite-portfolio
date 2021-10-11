@@ -37,11 +37,23 @@ router.afterEach(() => {
 
 <template>
   <Navbar />
-  <router-view />
+  <transition name="fade">
+    <router-view />
+  </transition>
   <Footer />
 </template>
 
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .8s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 :root {
   --primary-color: #28a386;
   --font-family: sans-serif, system-ui
