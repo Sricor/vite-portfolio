@@ -45,7 +45,11 @@
       <a href="https://nuxtjs.org/" target="_blank"> Vite.js </a>,
       <a href="https://simpleicons.org/" target="_blank"> Simple Icons </a>
     </p>
-    <p>Sricor © 2020 - {{ new Date().getFullYear() }} 粤ICP备2021126496号</p>
+    <p>
+      <a href="https://simpleicons.org/" target="_blank">
+        Sricor © 2020 - {{ new Date().getFullYear() }} 粤ICP备2021126496号
+      </a>
+    </p>
   </div>
 </footer>
 </template>
