@@ -47,7 +47,7 @@
     </p>
     <p>
       Sricor © 2020 - {{ new Date().getFullYear() }} 
-      <a href="https://simpleicons.org/" target="_blank">
+      <a href="https://beian.miit.gov.cn/" target="_blank">
         粤ICP备2021126496号
       </a>
     </p>
